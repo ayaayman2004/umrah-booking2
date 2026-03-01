@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/umrah-booking/static/css/main.78343e11.css",
-    "main.js": "/umrah-booking/static/js/main.88b5edca.js",
+    "main.js": "/umrah-booking/static/js/main.cc57dbd0.js",
     "static/js/453.e2aaa3bc.chunk.js": "/umrah-booking/static/js/453.e2aaa3bc.chunk.js",
     "static/media/video.mp4": "/umrah-booking/static/media/video.2df74e1cec7ad23e10ca.mp4",
     "static/media/img3.png": "/umrah-booking/static/media/img3.13abbb8941762e3ebe91.png",
@@ -38,11 +38,11 @@
     "static/media/مني1.jpg": "/umrah-booking/static/media/مني1.7dae02c348cc7d6eb417.jpg",
     "index.html": "/umrah-booking/index.html",
     "main.78343e11.css.map": "/umrah-booking/static/css/main.78343e11.css.map",
-    "main.88b5edca.js.map": "/umrah-booking/static/js/main.88b5edca.js.map",
+    "main.cc57dbd0.js.map": "/umrah-booking/static/js/main.cc57dbd0.js.map",
     "453.e2aaa3bc.chunk.js.map": "/umrah-booking/static/js/453.e2aaa3bc.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.78343e11.css",
-    "static/js/main.88b5edca.js"
+    "static/js/main.cc57dbd0.js"
   ]
 }
