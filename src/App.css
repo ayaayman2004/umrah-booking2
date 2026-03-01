@@ -36,3 +36,1954 @@
     transform: rotate(360deg);
   }
 }
+/* الألوان الأساسية */
+:root {
+  --blue-dark: #0d1f3c;
+  --orange-dark: #d35400;
+  --white: #ffffff;
+}
+
+/* Body Font */
+body {
+  font-family: 'Cairo', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Hero Section */
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--blue-dark);
+  color: var(--white);
+  padding: 40px 20px;
+  border-radius: 20px;
+  margin: 20px auto;
+  max-width: 1200px;
+}
+
+.hero-text {
+  flex: 1;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.hero-text h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.hero-text p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.btn-primary {
+  background-color: var(--orange-dark);
+  color: var(--white);
+  padding: 5px 10px;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #e67e22;
+  transform: translateY(-2px);
+}
+
+.hero-image img {
+  max-width: 100%;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Features Section */
+.features {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 40px 0;
+  gap: 20px;
+}
+
+.feature-card {
+  background-color: var(--blue-dark);
+  color: var(--white);
+  padding: 20px;
+  border-radius: 20px;
+  flex: 1 1 250px;
+  max-width: 300px;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.feature-card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+}
+
+.feature-card p {
+  font-size: 1rem;
+}
+/* //navbar */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 65px;
+  background: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 -25px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  direction: rtl;
+  z-index: 1000;
+}
+
+body {
+  padding-top: 65px;
+}
+
+/* اللوجو */
+.logo img {
+  width: 140px;
+  height: 60px;
+}
+
+/* الروابط */
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 1px; /* 👈 صغير عشان الشكل يبقى مظبوط */
+}
+
+/* الرابط */
+.nav-item {
+  text-decoration: none;
+  color: #333;
+  font-size: 15px;
+  font-weight: 500;
+  white-space: nowrap;
+  padding: 2px 12px; /* 👈 يخلي الرئيسية تظهر كاملة */
+}
+
+.nav-item:hover {
+  color: #1f7a4c;
+}
+
+/* Dropdown */
+.dropdown {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 2px; /* 👈 يخلي مكة و المدينة جنب بعض */
+  cursor: pointer;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 30px;
+  right: 0;
+  background: white;
+  border-radius: 6px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  min-width: 120px;
+  z-index: 1000;
+}
+
+.dropdown-menu a {
+  padding: 8px 10px;
+  text-decoration: none;
+  color: #333;
+  white-space: nowrap;
+}
+
+.dropdown-menu a:hover {
+  background: #f5f5f5;
+}
+
+/* 3 شرط */
+.hamburger {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* 📱 الموبايل */
+@media (max-width: 768px) {
+
+  .hamburger {
+    display: block;
+  }
+
+  .nav-links {
+    position: fixed;
+    top: 65px;
+    right: -100%;
+    width: 75%;
+    height: 100vh;
+    background: white;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+    gap: 12px;
+    transition: 0.3s ease;
+  }
+
+  .nav-links.active {
+    right: 0;
+  }
+
+  .dropdown {
+    flex-direction: row; /* 👈 يخلي مكة / المدينة جنب بعض */
+  }
+}
+
+/* footer */
+.footer {
+  background: #0f172a; /* كحلي */
+  color: white;
+  padding: 50px 20px;
+  margin-top: 40px;
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.footer-section {
+  padding: 0 10px;
+}
+
+.footer-section h3 {
+  margin-bottom: 12px;
+  font-size: 18px;
+  color: white;
+}
+
+.footer-section p {
+  color: #cbd5e1;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.footer-section a {
+  display: block;
+  color: #cbd5e1;
+  text-decoration: none;
+  margin-bottom: 6px;
+  font-size: 14px;
+}
+
+.footer-section a:hover {
+  color: #f97316; /* أورانج */
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 25px;
+  border-top: 1px solid #334155;
+  padding-top: 12px;
+  font-size: 13px;
+  color: #cbd5e1;
+}
+/* modal */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+}
+
+.modal-box {
+  background: white;
+  padding: 20px;
+  width: 350px;
+  border-radius: 10px;
+  position: relative;
+  text-align: center;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  border: none;
+  background: none;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.switch-auth span {
+  color: #f97316;
+  cursor: pointer;
+}
+.auth-container {
+  width: 320px;
+  padding: 20px;
+  background: white;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.auth-container h2 {
+  margin-bottom: 10px;
+}
+
+.auth-container input {
+  width: 100%;
+  padding: 10px;
+  margin: 6px 0;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+}
+
+.auth-container button {
+  width: 100%;
+  padding: 10px;
+  background: #f97316;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  margin-top: 10px;
+}
+
+.auth-container button:hover {
+  background: #ea580c;
+}
+.auth-container {
+  width: 320px;
+  padding: 20px;
+  background: white;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.auth-container h2 {
+  margin-bottom: 12px;
+}
+
+.auth-container input {
+  width: 100%;
+  padding: 10px;
+  margin: 6px 0;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+}
+
+.auth-container button {
+  width: 100%;
+  padding: 10px;
+  background: #f97316;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.auth-container button:hover {
+  background: #ea580c;
+}
+
+.auth-container a {
+  display: block;
+  margin-top: 10px;
+  color: #0f172a;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.auth-container a:hover {
+  color: #f97316;
+}
+.booking-container {
+  width: 350px;
+  margin: 20px auto;
+  padding: 20px;
+  background: white;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.booking-container h2 {
+  margin-bottom: 10px;
+}
+
+.booking-container label {
+  display: block;
+  margin-top: 10px;
+  text-align: right;
+}
+
+.booking-container input,
+.booking-container select {
+  width: 100%;
+  padding: 8px;
+  margin-top: 4px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+}
+
+.booking-container button {
+  width: 100%;
+  padding: 10px;
+  background: #f97316;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  margin-top: 12px;
+  cursor: pointer;
+}
+
+.booking-container button:hover {
+  background: #ea580c;
+}
+.booking-container {
+  max-width: 450px;
+  margin: 40px auto;
+  padding: 20px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.booking-container h2 {
+  margin-bottom: 15px;
+}
+
+.booking-container select,
+.booking-container input {
+  width: 100%;
+  padding: 10px;
+  margin: 6px 0;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.star-container {
+  margin: 10px 0;
+}
+
+.star-container p {
+  margin-bottom: 6px;
+}
+
+.star-icon {
+  font-size: 22px;
+  margin-right: 5px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.star-icon:hover {
+  transform: scale(1.2);
+}
+
+.booking-btn {
+  width: 100%;
+  padding: 10px;
+  background: #f97316;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.booking-btn:hover {
+  background: #ea580c;
+}
+.user-avatar {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #f97316;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 16px;
+  text-transform: uppercase;
+}
+.booking-container {
+  max-width: 420px;
+  margin: 40px auto;
+  padding: 20px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.booking-container h2 {
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.booking-container select,
+.booking-container input {
+  width: 100%;
+  padding: 10px;
+  margin: 6px 0;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.star-container {
+  margin: 12px 0;
+}
+
+.star-container p {
+  margin-bottom: 6px;
+  font-weight: bold;
+}
+
+.star-icon {
+  font-size: 22px;
+  margin-right: 5px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.star-icon:hover {
+  transform: scale(1.2);
+}
+
+.booking-btn {
+  width: 100%;
+  padding: 10px;
+  background: #f97316;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.booking-btn:hover {
+  background: #ea580c;
+}
+.chat-wrapper {
+  max-width: 450px;
+  margin: 20px auto;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  display: flex;
+  flex-direction: column;
+  height: 500px;
+}
+
+.chat-header {
+  padding: 12px;
+  text-align: center;
+  border-bottom: 1px solid #eee;
+}
+
+.chat-body {
+  flex: 1;
+  padding: 10px;
+  overflow-y: auto;
+  background: #f7f7f7;
+}
+
+.chat-message {
+  display: flex;
+  align-items: flex-start;
+  gap: 6px;
+  margin: 6px 0;
+}
+
+.chat-message p {
+  padding: 8px;
+  border-radius: 10px;
+  max-width: 80%;
+}
+
+.chat-message.user {
+  justify-content: flex-end;
+}
+
+.chat-message.user p {
+  background: #f97316;
+  color: white;
+  text-align: right;
+}
+
+.chat-message.bot p {
+  background: #eee;
+  text-align: left;
+}
+
+.chat-footer {
+  display: flex;
+  padding: 8px;
+  border-top: 1px solid #ddd;
+}
+
+.chat-footer input {
+  flex: 1;
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+}
+
+.chat-footer button {
+  margin-left: 6px;
+  padding: 8px 12px;
+  background: #f97316;
+  color: white;
+  border: none;
+  border-radius: 6px;
+}
+.packages-list {
+  padding: 20px 12px;
+}
+
+.packages-list h2 {
+  text-align: center;
+  margin-bottom: 18px;
+}
+
+.package-item {
+  background: white;
+  border-radius: 14px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  margin-bottom: 18px;
+  overflow: hidden;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.package-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.package-content {
+  padding: 14px;
+  text-align: center;
+}
+
+.package-content h3 {
+  margin-bottom: 6px;
+}
+
+.package-content p {
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.price {
+  font-weight: bold;
+  color: #f97316;
+  margin-bottom: 10px;
+}
+
+.stars {
+  display: flex;
+  justify-content: center;
+  gap: 4px;
+  margin-bottom: 6px;
+}
+
+.stars svg {
+  font-size: 18px;
+}
+
+.package-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+
+.btn-book,
+.btn-whatsapp {
+  padding: 9px 14px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.btn-book {
+  background: #f97316;
+  color: white;
+}
+
+.btn-whatsapp {
+  background: #25d366;
+  color: white;
+}
+
+@media (max-width: 600px) {
+  .package-image {
+    height: 160px;
+  }
+
+  .package-content {
+    padding: 12px;
+  }
+}
+.hotels-wrapper {
+  padding: 25px 12px;
+  text-align: center;
+}
+
+.hotels-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 15px;
+}
+
+.hotel-card {
+  text-decoration: none;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  overflow: hidden;
+  transition: transform 0.2s;
+}
+
+.hotel-card:hover {
+  transform: translateY(-6px);
+}
+
+.hotel-image {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.hotel-content {
+  padding: 12px;
+  text-align: center;
+}
+
+.location {
+  color: #555;
+}
+
+.hotel-btn {
+  margin-top: 8px;
+  padding: 8px;
+  background: #f97316;
+  color: white;
+  border-radius: 6px;
+}
+
+.hotel-details {
+  padding: 20px;
+  text-align: center;
+}
+
+.hotel-details img {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 12px;
+}
+
+.hotels-wrapper {
+  padding: 25px 12px;
+  text-align: center;
+}
+
+.hotels-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 15px;
+}
+
+.hotel-card {
+  text-decoration: none;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  overflow: hidden;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.hotel-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+}
+
+.hotel-card.large {
+  grid-column: span 2;
+  text-align: center;
+}
+
+.hotel-image {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.hotel-content {
+  padding: 12px;
+  text-align: center;
+}
+
+.location {
+  color: #555;
+}
+
+.hotel-features {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 6px;
+  margin: 10px 0;
+  font-size: 14px;
+}
+
+.hotel-features div {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  justify-content: center;
+}
+
+.hotel-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+
+.btn-book,
+.btn-whatsapp {
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.btn-book {
+  background: #f97316;
+  color: white;
+}
+
+.btn-whatsapp {
+  background: #25d366;
+  color: white;
+}
+
+.hotel-details {
+  padding: 20px;
+  text-align: center;
+}
+
+.hotel-details img {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 12px;
+}
+
+@media (max-width: 600px) {
+  .hotel-card.large {
+    grid-column: span 1;
+  }
+}
+:root {
+  --primary: #f97316; /* برتقالي دافئ */
+  --primary-dark: #e65c00;
+  --text: #2d2d2d;
+  --muted: #555;
+}
+ 
+.btn-book {
+  background: var(--primary);
+  color: white;
+}
+
+.btn-book:hover {
+  background: var(--primary-dark);
+}
+
+.location {
+  color: var(--muted);
+}
+
+h2, h3 {
+  color: var(--text);
+}
+.vip-details-wrapper {
+  background: linear-gradient(135deg, #fff7ed, #fef3c7);
+  padding: 50px 15px;
+  display: flex;
+  justify-content: center;
+}
+
+.vip-card {
+  max-width: 1000px;
+  width: 100%;
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+  overflow: hidden;
+  animation: fadeUp 0.6s ease;
+}
+
+.slider {
+  position: relative;
+}
+
+.slider img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+}
+
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.5);
+  color: #fff;
+  border: none;
+  font-size: 25px;
+  padding: 8px 12px;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.prev { left: 15px; }
+.next { right: 15px; }
+
+.vip-content {
+  padding: 30px;
+}
+
+.stars {
+  margin: 10px 0;
+}
+
+.active-star {
+  color: gold;
+}
+
+.location {
+  font-weight: bold;
+  color: #b45309;
+}
+
+.description {
+  margin: 15px 0;
+  line-height: 1.8;
+  color: #444;
+}
+
+.features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px,1fr));
+  gap: 12px;
+  margin: 20px 0;
+}
+
+.features div {
+  background: #fff7ed;
+  padding: 10px;
+  border-radius: 10px;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  transition: 0.3s;
+}
+
+.features div:hover {
+  transform: scale(1.05);
+}
+
+.buttons {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.btn-book {
+  background: #ea580c;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.btn-whatsapp {
+  background: #16a34a;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 10px;
+  text-decoration: none;
+}
+
+.btn-book:hover,
+.btn-whatsapp:hover {
+  opacity: 0.85;
+}
+
+@keyframes fadeUp {
+  from {opacity: 0; transform: translateY(40px);}
+  to {opacity: 1; transform: translateY(0);}
+}
+.details-content {
+  direction: rtl;
+  text-align: right;
+  padding: 20px;
+}
+
+.description {
+  line-height: 1.8;
+  margin-bottom: 15px;
+}
+
+.slider img {
+  width: 100%;
+  height: 380px;
+  object-fit: cover;
+  border-radius: 12px 12px 0 0;
+}
+
+.details-card {
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.features div {
+  justify-content: flex-start;
+}
+/* //buss */
+.bus-wrapper {
+  padding: 30px 10px;
+  text-align: center;
+}
+
+.bus-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 15px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.bus-card {
+  background: white;
+  border-radius: 12px;
+  padding: 15px;
+  text-decoration: none;
+  color: #333;
+  box-shadow: 0 8px 18px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.bus-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.12);
+}
+
+.bus-card h3 {
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+.bus-features p {
+  margin: 4px 0;
+  font-size: 14px;
+}
+
+/* زر الحجز */
+.btn-book {
+  background: #f97316;
+  color: white;
+  padding: 8px;
+  border-radius: 6px;
+  margin-top: 10px;
+  display: inline-block;
+  font-size: 14px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .bus-grid {
+    grid-template-columns: 1fr;
+  }
+}
+ 
+ 
+.flight-wrapper {
+  padding: 90px 15px 40px;
+  display: flex;
+  justify-content: center;
+  direction: rtl;
+}
+
+.flight-card {
+  max-width: 600px;
+  width: 100%;
+  background: white;
+  border-radius: 15px;
+  padding: 25px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  text-align: right;
+}
+
+.flight-image {
+  width: 100%;
+  border-radius: 12px;
+  margin-bottom: 15px;
+}
+
+.flight-card h2 {
+  margin-bottom: 10px;
+}
+
+.flight-card p {
+  line-height: 1.7;
+  color: #444;
+  margin-bottom: 15px;
+}
+
+.btn-whatsapp {
+  display: inline-block;
+  background: #16a34a;
+  color: white;
+  padding: 12px 18px;
+  border-radius: 8px;
+  text-decoration: none;
+  text-align: center;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.btn-whatsapp:hover {
+  background: #0f9b3a;
+  transform: scale(1.03);
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .flight-card {
+    padding: 18px;
+  }
+}
+
+
+.home-wrapper {
+  padding: 80px 15px 40px;
+  direction: rtl;
+}
+
+/* slider كامل العرض */
+.slider-section {
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.18);
+}
+
+/* الصورة تاخد العرض كله */
+.slider-image {
+  width: 100%;
+  height: 420px;
+  object-fit: cover;
+  display: block;
+  transition: opacity 0.5s ease;
+}
+
+/* الكلام في النص على الصورة */
+.slider-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(0, 0, 0, 0.55);
+  color: white;
+  padding: 20px;
+  border-radius: 14px;
+  text-align: center;
+  width: 80%;
+}
+
+.slider-overlay h1 {
+  margin: 0 0 10px;
+  font-size: 26px;
+}
+
+.slider-overlay p {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+/* stats */
+.stats-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 12px;
+  margin-top: 25px;
+  text-align: center;
+}
+
+.stat-card {
+  background: white;
+  padding: 18px;
+  border-radius: 14px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+}
+
+.stat-card h3 {
+  color: #f97316;
+}
+
+/* الخدمات */
+.services-section {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 14px;
+}
+
+.service-card {
+  background: white;
+  padding: 20px;
+  border-radius: 14px;
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-6px);
+}
+
+.badge {
+  background: #f97316;
+  color: white;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+}
+
+/* زر */
+.btn-small {
+  display: inline-block;
+  margin-top: 8px;
+  background: #f97316;
+  color: white;
+  padding: 7px 14px;
+  border-radius: 6px;
+  text-decoration: none;
+}
+
+/* معلومات */
+.info-section {
+  margin-top: 25px;
+  text-align: center;
+  background: white;
+  padding: 18px;
+  border-radius: 14px;
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.08);
+}
+
+/* الخريطة */
+.map-section {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.map-frame {
+  width: 100%;
+  max-width: 1200px;
+  height: 280px;
+  border: 0;
+  border-radius: 14px;
+}
+
+/* responsive */
+@media (max-width: 768px) {
+  .slider-image {
+    height: 280px;
+  }
+
+  .slider-overlay {
+    width: 90%;
+  }
+}
+
+@media (max-width: 480px) {
+  .slider-image {
+    height: 220px;
+  }
+
+  .slider-overlay h1 {
+    font-size: 20px;
+  }
+}
+.about-wrapper {
+  padding: 90px 15px 40px;
+  direction: rtl;
+  display: flex;
+  justify-content: center;
+}
+
+.about-card {
+  background: white;
+  max-width: 900px;
+  width: 100%;
+  border-radius: 16px;
+  padding: 25px;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
+  text-align: right;
+  transition: transform 0.2s ease;
+}
+
+.about-card:hover {
+  transform: translateY(-4px);
+}
+
+.about-card h2 {
+  margin-bottom: 15px;
+  color: #1f2937;
+}
+
+.about-card p {
+  line-height: 1.8;
+  color: #444;
+  margin-bottom: 12px;
+}
+
+/* تواصل */
+.about-contact {
+  margin-top: 20px;
+  padding-top: 15px;
+  border-top: 1px solid #eee;
+}
+
+.about-contact h3 {
+  margin-bottom: 10px;
+}
+
+.about-contact a {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  text-decoration: none;
+  color: #1f2937;
+  background: #f5f5f5;
+  padding: 8px 12px;
+  border-radius: 8px;
+  margin: 4px;
+  transition: background 0.2s ease;
+}
+
+.about-contact a:hover {
+  background: #e5e5e5;
+}
+
+/* رقم الهاتف */
+.about-contact p {
+  margin-top: 10px;
+  font-weight: 500;
+}
+
+/* responsive */
+@media (max-width: 768px) {
+  .about-card {
+    padding: 20px;
+  }
+
+  .about-contact a {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-card {
+    padding: 18px;
+    text-align: center;
+  }
+
+  .about-card p {
+    font-size: 14px;
+  }
+
+  .about-contact a {
+    width: 100%;
+  }
+}
+ .bus-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.btn-book,
+.btn-whatsapp {
+  width: 90%;
+  text-align: center;
+  padding: 10px 14px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.btn-book {
+  background: #f97316;
+  color: white;
+}
+
+.btn-whatsapp {
+  background: #16a34a;
+  color: white;
+}
+
+.btn-book:hover {
+  background: #e85d04;
+}
+
+.btn-whatsapp:hover {
+  background: #138a3a;
+}
+.bus-page {
+  padding: 90px 15px 40px;
+  direction: rtl;
+  display: flex;
+  justify-content: center;
+}
+
+.bus-page .bus-card {
+  background: white;
+  max-width: 500px;
+  width: 100%;
+  padding: 22px;
+  border-radius: 14px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  text-align: center;
+}
+
+.bus-page .bus-card h2 {
+  margin-bottom: 15px;
+}
+
+/* inputs */
+.bus-page .bus-card input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+/* الأزرار */
+.bus-page .bus-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.bus-page .btn-book,
+.bus-page .btn-whatsapp {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  font-weight: 500;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.bus-page .btn-book {
+  background: #f97316;
+  color: white;
+}
+
+.bus-page .btn-whatsapp {
+  background: #16a34a;
+  color: white;
+  text-align: center;
+}
+
+.bus-page .btn-book:hover {
+  background: #e85d04;
+  transform: translateY(-2px);
+}
+
+.bus-page .btn-whatsapp:hover {
+  background: #138a3a;
+  transform: translateY(-2px);
+}
+
+/* رسالة النجاح */
+.bus-page .success-msg {
+  margin-top: 10px;
+  color: #16a34a;
+  font-weight: 500;
+}
+
+/* responsive */
+@media (max-width: 480px) {
+  .bus-page .bus-card {
+    padding: 18px;
+  }
+
+  .bus-page .bus-card input {
+    font-size: 13px;
+  }
+}
+  
+ .btn-whatsapp-nav {
+   background: #138a3a;
+  color: var(--white);
+  padding: 5px 10px;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-left: 20px;
+text-decoration: none;
+}
+
+.btn-whatsapp-nav:hover {
+  background: #93caa5;
+}
+
+.flight-wrapper {
+  padding: 90px 15px 40px;
+  display: flex;
+  justify-content: center;
+  direction: rtl;
+}
+
+.flight-card {
+  background: white;
+  max-width: 900px;
+  width: 100%;
+  border-radius: 16px;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  transition: transform 0.2s ease;
+}
+
+.flight-card:hover {
+  transform: translateY(-4px);
+}
+
+.flight-image {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+}
+
+.flight-content {
+  padding: 20px;
+  text-align: right;
+}
+
+.flight-content h2 {
+  margin-bottom: 10px;
+}
+
+.flight-content p {
+  line-height: 1.8;
+  color: #444;
+}
+
+/* زر واتساب */
+.btn-whatsapp {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: #16a34a;
+  color: white;
+  padding: 10px 18px;
+  border-radius: 10px;
+  text-decoration: none;
+  margin-top: 12px;
+  transition: background 0.2s ease;
+}
+
+.btn-whatsapp:hover {
+  background: #138a3a;
+}
+
+/* responsive */
+@media (max-width: 768px) {
+  .flight-card {
+    max-width: 100%;
+  }
+
+  .flight-image {
+    height: 200px;
+  }
+
+  .flight-content {
+    text-align: center;
+  }
+}
+.video-section {
+  position: relative;
+  width: 100%;
+  height: 90vh;
+  overflow: hidden;
+}
+
+.hero-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.video-overlay {
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  transform: translate(50%, -50%);
+  text-align: center;
+  color: white;
+  background: rgba(0, 0, 0, 0.45);
+  padding: 25px 35px;
+  border-radius: 12px;
+}
+
+.video-overlay h1 {
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+.video-overlay p {
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+
+.btn-hero {
+  background: #f97316;
+  color: white;
+  padding: 10px 18px;
+  border-radius: 8px;
+  text-decoration: none;
+}
+
+.btn-hero:hover {
+  background: #ea580c;
+}
+
+.map-frame {
+  width: 100%;
+  height: 350px;
+  border: 0;
+}
+.btn-whatsapp{
+  text-align: center;
+}
+.admin-wrapper {
+  padding: 30px;
+  direction: rtl;
+}
+
+.table-container {
+  overflow-x: auto;
+}
+
+.admin-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+}
+
+.admin-table th,
+.admin-table td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: center;
+}
+
+.admin-table th {
+  background: #f5f5f5;
+}
+
+.status {
+  padding: 4px 8px;
+  border-radius: 6px;
+}
+
+.status.confirmed {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.status.canceled {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+.status.pending {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.btn-confirm {
+  background: #22c55e;
+  color: white;
+  border: none;
+  padding: 6px 10px;
+  margin: 2px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.btn-cancel {
+  background: #ef4444;
+  color: white;
+  border: none;
+  padding: 6px 10px;
+  margin: 2px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.success-msg {
+  margin-top: 10px;
+  color: green;
+  font-weight: bold;
+}
+  
+.admin-container {
+  padding: 20px;
+}
+
+.loading {
+  text-align: center;
+  font-size: 18px;
+}
+
+.admin-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.admin-table th,
+.admin-table td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: center;
+}
+
+.admin-table th {
+  background: #f5f5f5;
+}
+.btn-whatsapp{
+display: flex;
+justify-content: center;
+align-items: center;
+text-align: center;
+}
+.booking-btn{
+  background-color: #0f9b3a;
+}
+/* فورم حجز الباص (نفس تصميم الحجز) */
+/*   */
+ .bus-page {
+  width: 100%;
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+
+  /* الكلام من اليمين */
+  direction: rtl;
+  text-align: right;
+}
+
+/* العنوان */
+.bus-page h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* الحقول */
+.bus-page input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+
+  /* النص من اليمين */
+  text-align: right;
+  box-sizing: border-box;
+}
+
+/* الـ placeholder من اليمين */
+.bus-page input::placeholder {
+  text-align: right;
+}
+
+/* زر واتساب */
+.btn-whatsapp {
+  width: 100%;
+  padding: 12px;
+  background: #25d366;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.btn-whatsapp:hover {
+  background: #1ebe5d;
+}
+
+/* متجاوب */
+@media (max-width: 768px) {
+  .bus-page {
+    margin: 10px;
+    padding: 18px;
+  }
+
+  .btn-whatsapp {
+    font-size: 15px;
+  }
+}
+input,select{
+  direction: rtl;
+}
+.booking-container{
+  padding: 30px;
+}
+select{
+position: relative;
+left: 20px;
+width: 200px;
+}
+.whats{
+  background-color: #1ebe5d;
+}
+.buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.btn-book,
+.btn-whatsapp {
+  flex: 1;
+  padding: 12px;
+  border-radius: 6px;
+  font-size: 16px;
+  text-align: center;
+  border: none;
+  cursor: pointer;
+}
+
+/* زر الحجز */
+.btn-book {
+  background: rgb(255, 166, 0);
+  color: white;
+}
+
+/* زر واتساب */
+.btn-whatsapp {
+  background: #128c7e;
+  color: white;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+
+.video-section{
+  position: relative;
+top: -100px;
+width: 100%;
+}
+.hotels-wrapper {
+  text-align: center;
+  padding: 20px;
+}
+
+.hotels-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* للشاشات المتوسطة (تابلت) */
+@media (max-width: 1024px) {
+  .hotels-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* للموبايل */
+@media (max-width: 600px) {
+  .hotels-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.hotel-card {
+  text-decoration: none;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  overflow: hidden;
+}
+
+.hotel-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.hotel-content {
+  padding: 10px;
+}
+
+.hotel-content h3 {
+  margin: 0;
+}
+
+.location {
+  color: #666;
+}

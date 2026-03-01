@@ -1,0 +1,89 @@
+.bus-page {
+  padding: 90px 15px 40px;
+  direction: rtl;
+  display: flex;
+  justify-content: center;
+}
+
+.bus-card {
+  background: white;
+  max-width: 500px;
+  width: 100%;
+  padding: 22px;
+  border-radius: 14px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  text-align: center;
+}
+
+.bus-card h2 {
+  margin-bottom: 15px;
+}
+
+/* inputs */
+.bus-card input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+/* الأزرار */
+.bus-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.btn-book,
+.btn-whatsapp {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  font-weight: 500;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-book {
+  background: #f97316;
+  color: white;
+}
+
+.btn-whatsapp {
+  background: #16a34a;
+  color: white;
+  text-align: center;
+}
+
+.btn-book:hover {
+  background: #e85d04;
+  transform: translateY(-2px);
+}
+
+.btn-whatsapp:hover {
+  background: #138a3a;
+  transform: translateY(-2px);
+}
+
+/* رسالة النجاح */
+.success-msg {
+  margin-top: 10px;
+  color: #16a34a;
+  font-weight: 500;
+}
+
+/* responsive */
+@media (max-width: 480px) {
+  .bus-card {
+    padding: 18px;
+  }
+
+  .bus-card input {
+    font-size: 13px;
+  }
+}
